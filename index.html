@@ -1,41 +1,96 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title>Practical Todos</title>
-    <script type="text/javascript" src="https://rawgit.com/ScorchConway/todo-List/master/JavaScripts/todoList.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
   </head>
+
   <body>
+    <h1>Todo list demo</h1>
 
     <div>
-      <p>This project is from Gordon Zhu's class Practical JavaScript, on his website <a href="watchandcode.com">watchandcode.com</a>, which I used as an introduction to HTML and JavaScript.
-        As I develop this site, I will leave a version of the todo list as it is, and add features to a seperate version that will also be located on this page.
+      <p>
+        This is the finished product of Gordon Zhu's excellent class "Practical JavaScript".  You can see it has functionality to add, change, delete, toggle, and toggle all todos from a list.
       </p>
     </div>
 
-    <h1>Todo List</h1>
-
     <div>
-      <button onclick="handlers.toggleAll()">Toggle All</button>
+      <button onclick="handlers.toggleAll()">Toggle all</button>
     </div>
 
     <div>
-      <button onclick="handlers.addTodo()">Add</button>
-      <input id="addTodoTextInput" type="text">
+      <button onclick="handlers.addTodo()">Add Todo</button>
+      <input type="text" id="addTodoTextInput-demo">
     </div>
 
     <div>
       <button onclick="handlers.changeTodo()">Change Todo</button>
-      <input id="changeTodoPositionInput" type="number">
-      <input id="changeTodoTextInput" type="text">
+      <input type="number" id="changeTodoNumberInput-demo">
+      <input type="text" id="changeTodoTextInput-demo">
+    </div>
+
+    <div>
+      <button onclick="handlers.deleteTodo()">Delete Todo</button>
+      <input type="number" id="deleteTodoNumberInput-demo">
     </div>
 
     <div>
       <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
-      <input id="toggleCompletedPositionInput" type="number">
+      <input type="number" id="toggleCompletedNumberInput-demo">
     </div>
 
-    <ul>
+    <ul id="demo-list">
     </ul>
-    <script src="/client.js"></script>
+
+
+
+
+
+
+    <h1>Todo list with added features</h1>
+
+    <div>
+      <p>
+        Below, you can see a version of the todo list where I have planned to add more features, and implemented some of them.
+      </p>
+
+      <div>
+        <button onclick="handlers.loadFeatList()" id="loadFeatList">Load Features to Add</button>
+      </div>
+    </div>
+
+    <div>
+      <button onclick="handlers.toggleAll()">Toggle all</button>
+    </div>
+
+    <div>
+      <button onclick="handlers.addTodo()">Add Todo</button>
+      <input type="text" id="addTodoTextInput-feat-list">
+    </div>
+
+    <div>
+      <button onclick="handlers.changeTodo()">Change Todo</button>
+      <input type="number" id="changeTodoNumberInput-feat-list">
+      <input type="text" id="changeTodoTextInput-feat-list">
+    </div>
+
+    <div>
+      <button onclick="handlers.deleteTodo()">Delete Todo</button>
+      <input type="number" id="deleteTodoNumberInput-feat-list">
+    </div>
+
+    <div>
+      <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+      <input type="number" id="toggleCompletedNumberInput-feat-list">
+    </div>
+
+    <div id="feat-list">
+    </div>
+
+    <p id="log"></p>
+
   </body>
+
 </html>
