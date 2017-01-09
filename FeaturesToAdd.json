@@ -1,0 +1,43 @@
+{
+  "todos": [
+    {
+      "todoText": "todoText",
+      "completed": false
+    },
+
+    {
+      "todoText": "display additional todo list",
+      "completed": true
+    },
+
+    {
+      "todoText": "put placeholder attribute 'add todo' in text field",
+      "completed": false
+    },
+
+    {
+      "todoText": "load data from json file to display in list",
+      "completed": false
+    },
+
+    {
+      "todoText": "hover over text to see date added, date edited(optional), date completed(optional)",
+      "completed": false
+    },
+
+    {
+      "todoText": "add save button, prompt for a password",
+      "completed": false
+    },
+
+    {
+      "todoText": "hit enter to add, change, delete, or toggle",
+      "completed": false
+    },
+
+    {
+      "todoText": "change to ordered list, change change todo and toggle completed to begin with one (not zero)",
+      "completed": false
+    }
+  ]
+}
