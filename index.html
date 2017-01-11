@@ -9,7 +9,6 @@
 
     <title>Practical Todos</title>
   </head>
-
   <body>
     <h1>Todo list demo</h1>
 
@@ -20,32 +19,31 @@
     </div>
 
     <div>
-      <button onclick="handlers.toggleAll()">Toggle all</button>
+      <button onclick="handlers.toggleAll('todos')">Toggle all</button>
     </div>
 
     <div>
-      <button onclick="handlers.addTodo()">Add Todo</button>
+      <button onclick="handlers.addTodo('todos')">Add Todo</button>
       <input type="text" id="addTodoTextInput-demo">
     </div>
 
     <div>
-      <button onclick="handlers.changeTodo()">Change Todo</button>
+      <button onclick="handlers.changeTodo('todos')">Change Todo</button>
       <input type="number" id="changeTodoNumberInput-demo">
       <input type="text" id="changeTodoTextInput-demo">
     </div>
 
     <div>
-      <button onclick="handlers.deleteTodo()">Delete Todo</button>
+      <button onclick="handlers.deleteTodo('todos')">Delete Todo</button>
       <input type="number" id="deleteTodoNumberInput-demo">
     </div>
 
     <div>
-      <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+      <button onclick="handlers.toggleCompleted('todos')">Toggle Completed</button>
       <input type="number" id="toggleCompletedNumberInput-demo">
     </div>
 
-    <ul id="demo-list">
-    </ul>
+    <ul id="demo-list"></ul>
 
 
 
@@ -60,39 +58,39 @@
       </p>
 
       <div>
-        <button onclick="handlers.loadFeatList()" id="loadFeatList">Load Features to Add</button>
+        <button onclick="handlers.loadFeatList()" id="loadFeat-list">Load Features List</button>
       </div>
     </div>
 
     <div>
-      <button onclick="handlers.toggleAll()">Toggle all</button>
+      <button onclick="handlers.toggleAll('featListTodos')">Toggle all</button>
     </div>
 
     <div>
-      <button onclick="handlers.addTodo()">Add Todo</button>
+      <button onclick="handlers.addTodo('featListTodos')">Add Todo</button>
       <input type="text" id="addTodoTextInput-feat-list">
     </div>
 
     <div>
-      <button onclick="handlers.changeTodo()">Change Todo</button>
+      <button onclick="handlers.changeTodo('featListTodos')">Change Todo</button>
       <input type="number" id="changeTodoNumberInput-feat-list">
       <input type="text" id="changeTodoTextInput-feat-list">
     </div>
 
     <div>
-      <button onclick="handlers.deleteTodo()">Delete Todo</button>
+      <button onclick="handlers.deleteTodo('featListTodos')">Delete Todo</button>
       <input type="number" id="deleteTodoNumberInput-feat-list">
     </div>
 
     <div>
-      <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+      <button onclick="handlers.toggleCompleted('featListTodos')">Toggle Completed</button>
       <input type="number" id="toggleCompletedNumberInput-feat-list">
     </div>
 
-    <div id="feat-list">
+    <div>
+      <ul id="feat-list"></ul>
     </div>
 
-    <p id="log"></p>
 
   </body>
 
