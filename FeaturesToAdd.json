@@ -17,7 +17,7 @@
 
     {
       "todoText": "load data from json file to display in list",
-      "completed": false
+      "completed": true
     },
 
     {
