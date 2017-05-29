@@ -11,8 +11,8 @@
     },
 
     {
-      "todoText": "put placeholder attribute 'add todo' in text field",
-      "completed": false
+      "todoText": "put placeholder attributes in text and number fields",
+      "completed": true
     },
 
     {
