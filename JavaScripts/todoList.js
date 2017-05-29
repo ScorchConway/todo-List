@@ -76,27 +76,20 @@ var todoList = {
 var handlers = {
   toggleAll: function(list) {
     var listToToggle;
-    if (list === 'todos') {
-      listToToggle = todoList.todos;
-    } else {
-      listToToggle = todoList.featListTodos;
-    }
     todoList.toggleAll(list);
     view.displayTodos(list.valueOf());
   },
   addTodo: function(list) {
     var addTodoTextInput;
     if(list === 'todos') {
-      console.log(String(list));
       addTodoTextInput = document.getElementById('addTodoTextInput-demo');
       todoList.addTodo(addTodoTextInput.value, String(list));
     } else {
-      console.log('addTodo if statement, featList');
       addTodoTextInput = document.getElementById('addTodoTextInput-feat-list');
       todoList.addTodo(addTodoTextInput.value, String(list));
     }
     addTodoTextInput.value = '';
-    view.displayTodos(String(list));
+    view.displayTodos(list);
   },
   changeTodo: function(list) {
     var listToChange;
@@ -146,7 +139,9 @@ var handlers = {
       {
         todoText: "display additional todo list",
         completed: true
-      },{
+      },
+
+      {
         todoText: "put placeholder attribute 'add todo' in text field",
         completed: false
       },
