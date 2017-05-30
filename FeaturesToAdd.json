@@ -1,11 +1,6 @@
 {
   "todos": [
     {
-      "todoText": "todoText",
-      "completed": false
-    },
-
-    {
       "todoText": "display additional todo list",
       "completed": true
     },
@@ -16,7 +11,7 @@
     },
 
     {
-      "todoText": "load data from json file to display in list",
+      "todoText": "load data from json file to display in list, if empty",
       "completed": true
     },
 

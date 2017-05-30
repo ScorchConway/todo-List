@@ -142,8 +142,8 @@ var handlers = {
       },
 
       {
-        todoText: "put placeholder attribute 'add todo' in text field",
-        completed: false
+        "todoText": "put placeholder attributes in text and number fields",
+        "completed": true
       },
 
       {
@@ -178,6 +178,9 @@ var handlers = {
     //  featListFromJSON = data;
     //});
 
+    //document.getElementById('feat-list').innerHTML = '';
+
+
     console.log(featList.length);
     for (i = 0; i < featList.length; i++) {
       todoList.featListTodos.push({
@@ -185,6 +188,7 @@ var handlers = {
         completed: featList[i].completed
       });
     }
+    featList = [];
     view.displayTodos('featListTodos');
   }
 };
@@ -199,7 +203,6 @@ var view = {
       todosUl = document.getElementById('demo-list');
       todosUl.innerHTML = '';
     } else {
-      console.log('displayTodos() else statement');
       listToDisplay = todoList.featListTodos;
       todosUl = document.getElementById('feat-list');
       todosUl.innerHTML = '';
