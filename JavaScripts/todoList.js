@@ -1,6 +1,12 @@
 //todoList has functions to modify a 'todo list'
 //like add, display, change, delete, toggle item completion, toggle, all item completion
 
+// Set the global configs to synchronous
+// This facilitates the JSON loading
+$.ajaxSetup({
+    async: false
+});
+
 var todoList = {
   todos: [],
   featListTodos: [],
