@@ -135,60 +135,21 @@ var handlers = {
     view.displayTodos(list);
   },
   loadFeatList: function() {
-    var featList = [
-      {
-        todoText: "display additional todo list",
-        completed: true
-      },
+    var featList;
+    $.getJSON('featuresToAdd.json', function(data) {
+      featList = data;
+    });
 
-      {
-        "todoText": "put placeholder attributes in text and number fields",
-        "completed": true
-      },
+    var list = document.getElementById("feat-list");
+    console.log(list);
+    $(list).empty();
 
-      {
-        todoText: "load data from json file to display in list (currently stored in js)",
-        completed: false
-      },
-
-      {
-        todoText: "hover over text to see date added, date edited(optional), date completed(optional)",
-        completed: false
-      },
-
-      {
-        todoText: "add save button, prompt for a password",
-        completed: false
-      },
-
-      {
-        todoText: "hit enter to add, change, delete, or toggle",
-        completed: false
-      },
-
-      {
-        todoText: "change to ordered list, change change todo and toggle completed to begin with one (not zero)",
-        completed: false
-      }
-    ];
-
-    //---some code related to loading a json file---
-    //var featListFromJSON;
-    //$.getJSON("featList.json", function(data) {
-    //  featListFromJSON = data;
-    //});
-
-    //document.getElementById('feat-list').innerHTML = '';
-
-
-    console.log(featList.length);
-    for (i = 0; i < featList.length; i++) {
+    for (i = 0; i < Object.keys(featList.todos).length; i++) {
       todoList.featListTodos.push({
-        todoText: featList[i].todoText,
-        completed: featList[i].completed
+        todoText: featList.todos[i].todoText,
+        completed: featList.todos[i].completed
       });
     }
-    featList = [];
     view.displayTodos('featListTodos');
   }
 };

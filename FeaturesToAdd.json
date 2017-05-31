@@ -11,7 +11,7 @@
     },
 
     {
-      "todoText": "load data from json file to display in list, if empty",
+      "todoText": "load data from json file to display in list",
       "completed": true
     },
 
