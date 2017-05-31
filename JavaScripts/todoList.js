@@ -142,7 +142,7 @@ var handlers = {
   },
   loadFeatList: function() {
     var featList;
-    $.getJSON('FeaturesToAdd.json', function(data) {
+    $.getJSON('featuresToAdd.json', function(data) {
       featList = data;
     });
 
